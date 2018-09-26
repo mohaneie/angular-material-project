@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row mt-5 justify-content-center">
+    <div class="col-md-6">
+      <form name="userform" #userform="ngForm" (ngSubmit)="formnew()">
+        <mat-form-field>
+          <input type="text" matInput [(ngModel)]="userdetails.firstname" placeholder="Enter first name" name="firstname" required>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input type="text" matInput [(ngModel)]="userdetails.lastname" placeholder="Enter second name" name="lastname" required>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input type="password" matInput [(ngModel)]="userdetails.password" placeholder="Password" name="password" required>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input type="password" matInput [(ngModel)]="userdetails.confirmpassword" placeholder="Confirm password" name="confirmpassword" required>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input type="email" matInput [(ngModel)]="userdetails.email" placeholder="Email" name="email" required>
+        </mat-form-field><br>
+        <button mat-raised-button color="primary" [disabled]="userform.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
